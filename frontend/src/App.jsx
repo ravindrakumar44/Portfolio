@@ -1,4 +1,4 @@
-import { ThemeProvider } from './context/ThemeContext';
+
 import Cursor from './components/Cursor';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -14,7 +14,7 @@ import Contact from './sections/Contact';
 
 function App() {
   return (
-    <ThemeProvider>
+    <>
       <Cursor />
       <Navbar />
       <main>
@@ -28,7 +28,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-    </ThemeProvider>
+    </>
   );
 }
 

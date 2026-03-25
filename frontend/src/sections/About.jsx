@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
-import { useTheme } from '../context/ThemeContext';
+
 import profileImg from '../assets/Profile.jpg';
 
 const About = () => {
-  const { isDarkMode } = useTheme();
 
   return (
     <section id="about" className="py-24 bg-white  transition-colors">

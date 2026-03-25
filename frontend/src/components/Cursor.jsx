@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { useTheme } from '../context/ThemeContext';
 
 const Cursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
-  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     const updateMousePosition = (e) => {
@@ -29,7 +27,7 @@ const Cursor = () => {
   }, []);
 
   // Use a softer color depending on theme, or brand color
-  const cursorColor = isDarkMode ? '#22d3ee' : '#0891b2';
+  const cursorColor = '#0891b2';
 
   return (
     <>
