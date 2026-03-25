@@ -24,7 +24,14 @@ const certificatesData = [
     title: "Hackathon Participation (Webathon)",
     issuer: "Technical Event Organizer",
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
-    link: "#"
+    link: "https://drive.google.com/file/d/1FMRA2tlkqBsXR8zPhh24gV8PegNXYJ1u/view?usp=sharing"
+  },
+  {
+    id: 4,
+    title: "The Bits and Bytes of Computer Networking",
+    issuer: "Google / Coursera",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+    link: "https://drive.google.com/file/d/1-FF0TvXS97wWdoTZTTTtBZEYORrtO74F/view?usp=sharing"
   }
 ];
 

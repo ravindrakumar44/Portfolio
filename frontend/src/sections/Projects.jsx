@@ -28,7 +28,7 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=600&h=400&fit=crop",
     desc: "A responsive Spotify home page clone built using HTML and CSS.",
     github: "https://github.com/ravindrakumar44/CSS-Project",
-    live: "#"
+    live: "https://spotify-mu-mocha.vercel.app/"
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1553481187-be93c21490a9?w=600&h=400&fit=crop",
     desc: "The classic Simon Says memory game built using HTML, CSS, and Vanilla JavaScript.",
     github: "https://github.com/ravindrakumar44/Simon-Says-Game",
-    live: "#"
+    live: "https://simonsays-game-cyan.vercel.app/"
   }
 ];
 
@@ -93,37 +93,47 @@ const Projects = () => {
                 key={project.id}
                 className="group relative glass rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
               >
-                <a 
-                  href={project.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block cursor-pointer"
-                >
-                  <div className="relative overflow-hidden h-48">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                    />
-                    {/* Overlay on hover */}
-                    <div className="absolute inset-0 bg-primary-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <div className="bg-white/90 p-4 rounded-full shadow-lg transform translate-y-10 group-hover:translate-y-0 transition-transform">
-                        <FaGithub size={24} className="text-primary-600" />
-                      </div>
-                    </div>
+                <div className="relative overflow-hidden h-48">
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  />
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-primary-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      title="GitHub Repository"
+                      className="bg-white/90 p-4 rounded-full shadow-lg transform translate-y-10 group-hover:translate-y-0 transition-all hover:scale-110 hover:bg-white"
+                    >
+                      <FaGithub size={24} className="text-primary-600" />
+                    </a>
+                    {project.live !== "#" && (
+                      <a 
+                        href={project.live} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        title="Live Demo"
+                        className="bg-white/90 p-4 rounded-full shadow-lg transform translate-y-10 group-hover:translate-y-0 transition-all hover:scale-110 hover:bg-white delay-75"
+                      >
+                        <FaExternalLinkAlt size={24} className="text-primary-600" />
+                      </a>
+                    )}
                   </div>
-                  <div className="p-6">
-                    <span className="text-xs font-bold text-primary-600  uppercase tracking-wider mb-2 block">
-                      {project.category}
-                    </span>
-                    <h3 className="text-xl font-bold text-slate-900  mb-2 group-hover:text-primary-600 transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-slate-600  text-sm">
-                      {project.desc}
-                    </p>
-                  </div>
-                </a>
+                </div>
+                <div className="p-6">
+                  <span className="text-xs font-bold text-primary-600  uppercase tracking-wider mb-2 block">
+                    {project.category}
+                  </span>
+                  <h3 className="text-xl font-bold text-slate-900  mb-2 group-hover:text-primary-600 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate-600  text-sm">
+                    {project.desc}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </AnimatePresence>
